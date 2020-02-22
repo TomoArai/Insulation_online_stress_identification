@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="Req pu <= 0.018\ngini = 0.487\nsamples = 78\nvalue = [54, 11, 7, 6]\nclass = good", fillcolor="#eeae80"] ;
+1 [label="Ceq pu <= 25.76\ngini = 0.689\nsamples = 26\nvalue = [2, 11, 7, 6]\nclass = thermal", fillcolor="#d8fad5"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="DFeq pu <= 192.4\ngini = 0.604\nsamples = 15\nvalue = [2, 0, 7, 6]\nclass = moisture", fillcolor="#e9f4fc"] ;
+1 -> 2 ;
+3 [label="gini = 0.346\nsamples = 9\nvalue = [2, 0, 7, 0]\nclass = moisture", fillcolor="#72b9ec"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 6\nvalue = [0, 0, 0, 6]\nclass = oil", fillcolor="#d739e5"] ;
+2 -> 4 ;
+5 [label="gini = 0.0\nsamples = 11\nvalue = [0, 11, 0, 0]\nclass = thermal", fillcolor="#47e539"] ;
+1 -> 5 ;
+6 [label="gini = 0.0\nsamples = 52\nvalue = [52, 0, 0, 0]\nclass = good", fillcolor="#e58139"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
